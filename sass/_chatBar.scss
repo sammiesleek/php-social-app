@@ -1,0 +1,118 @@
+.chats{
+    position:fixed;
+    height:calc(100vh - 70px);
+    left:0;
+    width:100%;
+    background:rgb(0, 0, 0);
+    z-index: 1000;
+    top:70px;
+    display:flex;
+    .contain{
+        background:yellow;
+        width:100%;
+        .sef{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            .user-icon{
+                height:40px;
+                width:40px;
+            
+                img{
+                    width:100%;
+                    border-radius: 50%;
+                }
+           
+            }
+            .logout{
+
+            }
+        }
+        .search{
+            margin-top:30px;    
+            width:100%;
+            background: cornflowerblue;
+            display:flex;
+            align-items:center;
+            
+            i{
+                font-size:20px;
+            }
+            input{
+                padding:3% 0px;
+                width:90%;
+                background:none;
+                border:0;
+                outline:0;
+            }
+        }
+        .active{
+            margin-top:30px;
+            background:darkcyan;
+            .cont{
+                display: flex;
+                .item{
+                    display:flex;
+                    flex-direction: column;
+                    margin:0px 12.5px;
+                    width:fit-content;
+                    .user-icon{
+                        height:40px;
+                        width:40px;
+                        display: flex;
+                        flex-direction: column;
+                    
+                        img{
+                            width:100%;
+                            border-radius: 50%;
+                        }
+                
+                    }
+                    .logout{
+
+                    }
+                }
+            }
+        }
+        .recents{
+            margin-top: 30px;
+             .cont{
+                display: flex;
+                flex-direction: column;
+                .item{
+                    display:flex;
+                    align-items:center;
+                    margin-bottom:25px;
+                    
+                    // width:fit-content;
+                    .user-icon{
+                        height:55px;
+                        width:55px;
+                        display: flex;
+                        flex-direction: column;
+                    
+                        img{
+                            width:100%;
+                            border-radius: 50%;
+                        }
+                
+                    }
+                    .more{
+                        display:flex;
+                        flex-direction: column;
+                        margin-left:25px;
+                    }
+                    .indi{
+                        margin-left:auto;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and(min-width:700px) {
+    .chats{
+        width:300px;
+    }
+}

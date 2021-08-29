@@ -1,0 +1,112 @@
+@import 'config';
+@import 'header';
+@import 'leftbar';
+@import 'rightBar';
+@import 'mainContent';
+@import 'mainContent';
+@import 'chatBar';
+@import 'access';
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position:relative;
+    background-color: $body-color;
+    transition:all ease .5s;
+}
+a{
+    text-decoration: none !important;
+}
+
+// main section styling
+.wrap{
+    // display:flex;
+    justify-content:space-between;
+    padding:13px 5%;
+
+}
+@media screen and (min-width:700px) {
+    .wrap{
+        display:flex;
+    }
+}
+.theme-panel{
+    // width:300px;
+    // height:400px;
+    position:fixed;
+    z-index:10000;
+    padding: 20px 10px 20px 75px;
+    right:-300px;
+    background: $body-color;
+    top:30%;
+    display:flex;
+    justify-content: flex-start;
+    transform:translateY(-30%);
+    transition: all ease .5s;
+    &.open{
+        right: 0;
+
+    }
+    
+    .inn{
+        display:flex;
+        flex-direction: column;
+        background:transparent;
+        align-items:flex-start;
+        
+        .theme{
+            height:20px;
+            width:20px;
+            border-radius: 50%;
+            display:block;
+            margin-bottom: 20px;
+            position:relative;
+            cursor: pointer;
+            span{
+                position: absolute;
+                // top:30px;
+                right:30px;
+                opacity: 0;
+                
+                transition:all ease .4s;
+                
+            }
+            &:hover{
+                span{
+                    
+                    opacity:1
+                }
+            }
+            
+        }
+        #purple{
+            background:purple;
+            color:purple;
+            
+        }
+        #green{
+            background:green;
+            color:green;
+
+        }
+        #brown{
+            background:brown;
+            color:brown;
+        }
+        #gold{
+            background:gold;
+            color:gold;
+        }
+        #red{
+            background:red;
+            color: red;
+        }
+        .default{
+            background:#1876f2;
+            color:#1876f2;
+        }
+
+    }
+}

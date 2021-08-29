@@ -1,0 +1,27 @@
+$color1: var(--nav-color);
+$bg-color:var(--bg-color);
+$body-color:var(--body-color);
+$default:var(--primary-color);
+$txtar:var(--txtar);
+
+
+
+
+
+
+.online{
+    position:relative;
+     &:before{
+        content:'';
+        display:block;
+        height:10px;
+        width: 10px;
+        border:2px solid #fff;
+        border-radius: 50%;
+        background:green;
+        position:absolute;
+        top:0px;
+        right:0px;
+    }
+}
+

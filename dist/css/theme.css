@@ -1,0 +1,21 @@
+:root{
+    --body-color:#efefef;
+    --nav-color:#1876f2;
+    --bg-color:#fff;
+    --primary-color:#1876f2;
+    --txtar:#000;
+
+}
+
+.dark-theme{
+    --body-color:#0a0a0a;
+    --nav-color:#000;
+    --bg-color:#000;
+    --txtar:#fff;
+    
+}
+.theme_color{
+    --primary-color:#1876f2;
+
+}
+

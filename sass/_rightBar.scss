@@ -1,0 +1,99 @@
+.right_bar{
+    
+    background:$bg-color;
+    top:70px;
+    align-self:flex-start;
+    position:fixed; 
+    right:100%;
+    padding:20px;
+    border-radius:4px;
+    color:#626262;
+    .head{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:18px;
+        a{
+            text-decoration:none;
+            color:#1876f2;
+            font-size:$color1;
+        }
+        h4{
+            font-weight:600;
+            font-size:16px;
+        }
+    }
+    .events{
+        font-size:14px;
+        margin-bottom:20px;
+        display:flex;
+        .left-event{
+            border-radius: 10px;
+            width:65px;
+            height:65px;
+            margin-right:15px;
+            text-align: center;
+            text-align:center;
+            padding-top:10px;
+            position:relative;
+            overflow:hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background:#111111;
+            span{
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:100%;
+                background:$default;
+                color:#fff;
+                font-size:10px;
+                padding:15% 0px;
+            }
+            
+        }
+        .right-event{
+            h4{
+
+            }
+            p{
+                font-size:12px;
+            }
+            a{
+                font-size:12px;
+                text-decoration:none;
+                color:$default;
+            }
+        }
+    }
+    .ad-img{
+        width:100%;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+    .active-m{
+        display:flex;
+        margin-bottom: 20px;
+        align-items: center ;
+        .online{
+            width:40px;
+                height:40px;
+                margin-right:15px;
+            img{
+                width:100%;
+                border-radius: 50%;
+            }
+            &::before{
+                top:unset;
+                bottom:0;
+            }
+        }
+    }
+}
+
+@media screen  and (min-width:1085px) {
+    .right_bar{
+        position:sticky;
+        right:0;
+        flex-basis:25%;
+    }
+}
