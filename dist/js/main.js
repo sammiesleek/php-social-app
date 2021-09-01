@@ -79,11 +79,22 @@ else if(localStorage.getItem("theme") == "dark"){
 }
 
 
-if(localStorage.getItem("mode")){
-     document.querySelector('.theme_color').style.setProperty('--primary-color', colorId)
-}
+// if(localStorage.getItem("mode")){
+//      document.querySelector('.theme_color').style.setProperty('--primary-color', colorId)
+// }
 
 
 
 
-// login and sign up page
+// chat panel drawer
+const drawer = document.querySelector('.chat-bt');
+const panel = document.querySelector('.chats');
+const clc = document.querySelector('.clc');
+drawer.addEventListener('click', ()=>{
+    panel.classList.add('chat');
+    drawer.classList.add('off');
+})
+clc.addEventListener('click', ()=>{
+    panel.classList.remove('chat');
+    drawer.classList.remove('off');
+})

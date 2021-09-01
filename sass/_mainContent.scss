@@ -1,60 +1,67 @@
 .main_content{
-    // flex-basis:47%;
-    // top:70px;
-    // position:sticky; 
+    
     .story-gallery{
-        display:flex;
-        justify-content:space-between;
         margin-bottom: 20px;
-        .story{
-            flex-basis:18%;
-            padding-top: 32%;
-            position:relative;
-            z-index:-1;
-            background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url(../img/skill.jpg);
-            background-size:cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius:10px;
-            .id{
-                font-size:50px;
-                color:$color1;
-                position:absolute;
-                top:10px;
-                left:10px;
+        // position: relative;
+        overflow-x:hidden;
+        display:none;
+        .wrapp{
+            overflow-x:scroll;
+            // position: absolute;
+            display: flex;
+            top:0;
+            left:0;
+            // width:100%;
+            .story{
+                flex-basis:18%;
+                // margin-right: 20px;
+                padding-top: 32%;
+                position:relative;
+                background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url(../img/skill.jpg);
+                background-size:cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius:10px;
+                // width:300px;
+                .id{
+                    font-size:50px;
+                    color:$color1;
+                    position:absolute;
+                    top:10px;
+                    left:10px;
+                }
+                img{
+                    width:50px;
+                    border-radius: 50%;
+                    height:50px;
+                    border:4px solid $default;
+                }
+                p{
+                    color:white;
+                    text-align: center;
+                }
             }
-           
-            img{
-                width:50px;
-                border-radius: 50%;
-                height:50px;
-                border:4px solid $default;
+            .story1{
+            background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a1.jpg);
             }
-            p{
-                color:white;
-                text-align: center;
+            .my{
+                
+                .id{
+                    top:unset;
+                    left:50%;
+                    transform:translateX(-50%);
+                    bottom:40px;
+                } 
             }
-        }
-        .story1{
-           background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a1.jpg);
-        }
-        .my{
-            
-            .id{
-                top:unset;
-                left:50%;
-                transform:translateX(-50%);
-                bottom:40px;
-            } 
-        }
-        .story2{
-           background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a2.png);
-        }
-        .story3{
-           background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a3.png);
-        }
-        .story4{
-           background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a4.png);
+            .story2{
+            background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a2.png);
+            }
+            .story3{
+            background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a3.png);
+            }
+            .story4{
+            background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(../img/a4.png);
+            }
         }
     }
     .create-post{

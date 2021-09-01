@@ -3,9 +3,20 @@ $bg-color:var(--bg-color);
 $body-color:var(--body-color);
 $default:var(--primary-color);
 $txtar:var(--txtar);
+$textC:var(--g-tex);
+
+::-webkit-scrollbar{
+    width: 4px;
+    height:2px;
+    background: #000000;
+    
+}
 
 
 
+::-webkit-scrollbar-thumb{
+    background: $default;
+}
 
 
 

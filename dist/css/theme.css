@@ -4,6 +4,7 @@
     --bg-color:#fff;
     --primary-color:#1876f2;
     --txtar:#000;
+    --g-tex:black;
 
 }
 
@@ -12,6 +13,7 @@
     --nav-color:#000;
     --bg-color:#000;
     --txtar:#fff;
+    --g-tex:#ffffff;
     
 }
 .theme_color{

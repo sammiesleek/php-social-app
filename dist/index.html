@@ -50,10 +50,8 @@
 						<input type="tell" placeholder="Phone number" name="Phone" id="Phone">
 					</div>
 					<div class="loc field">
-						<select name="Country" id="Country">
-							<option value="empty">Select Country</option>
-							<option value="USA">USA</option>
-							<option value="Kenya">Kenya</option>
+						<select name="Country "  id="Country">
+							<!-- <option class="country" value="empty">Select Country</option> -->
 						</select>
 					</div>
 					<div class="field">
@@ -153,6 +151,27 @@
 		}
 
 		controller();
+
+		// countries API
+		function countries(){
+			const Option = document.getElementById('Country')
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET','resources/countries.json',true);
+			xhr.onload = function(){
+				if(this.status ==200){
+					var countries= JSON.parse(this.responseText).data;
+					var rst = 'nigeria';
+					countries.forEach(country => {
+					  rst +=
+                        '<option value='+country.name+'>'+country.name+'<option/>'
+					console.log(country.name)
+					});
+					Option.innerHTML= rst;
+				}
+			}
+			xhr.send()
+		}
+		countries();
 	</script>
 </body>
 </html>

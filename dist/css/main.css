@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
 .online {
   position: relative;
 }
@@ -334,6 +344,12 @@ header .settings-menu .night-mode-set .bt.open {
   color: var(--nav-color);
 }
 
+.left_bar .chat-bt {
+  width: 100%;
+  background: var(--bg-color);
+  display: none;
+}
+
 @media screen and (min-width: 700px) {
   .left_bar {
     left: 0;
@@ -467,21 +483,25 @@ header .settings-menu .night-mode-set .bt.open {
 }
 
 .main_content .story-gallery {
+  margin-bottom: 20px;
+  overflow-x: hidden;
+  display: none;
+}
+
+.main_content .story-gallery .wrapp {
+  overflow-x: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 20px;
+  top: 0;
+  left: 0;
 }
 
-.main_content .story-gallery .story {
+.main_content .story-gallery .wrapp .story {
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
   padding-top: 32%;
   position: relative;
-  z-index: -1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8))), url(../img/skill.jpg);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8)), url(../img/skill.jpg);
   background-size: cover;
@@ -490,7 +510,7 @@ header .settings-menu .night-mode-set .bt.open {
   border-radius: 10px;
 }
 
-.main_content .story-gallery .story .id {
+.main_content .story-gallery .wrapp .story .id {
   font-size: 50px;
   color: var(--nav-color);
   position: absolute;
@@ -498,24 +518,24 @@ header .settings-menu .night-mode-set .bt.open {
   left: 10px;
 }
 
-.main_content .story-gallery .story img {
+.main_content .story-gallery .wrapp .story img {
   width: 50px;
   border-radius: 50%;
   height: 50px;
   border: 4px solid var(--primary-color);
 }
 
-.main_content .story-gallery .story p {
+.main_content .story-gallery .wrapp .story p {
   color: white;
   text-align: center;
 }
 
-.main_content .story-gallery .story1 {
+.main_content .story-gallery .wrapp .story1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a1.jpg);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a1.jpg);
 }
 
-.main_content .story-gallery .my .id {
+.main_content .story-gallery .wrapp .my .id {
   top: unset;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -523,17 +543,17 @@ header .settings-menu .night-mode-set .bt.open {
   bottom: 40px;
 }
 
-.main_content .story-gallery .story2 {
+.main_content .story-gallery .wrapp .story2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a2.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a2.png);
 }
 
-.main_content .story-gallery .story3 {
+.main_content .story-gallery .wrapp .story3 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a3.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a3.png);
 }
 
-.main_content .story-gallery .story4 {
+.main_content .story-gallery .wrapp .story4 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a4.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a4.png);
 }
@@ -764,21 +784,25 @@ header .settings-menu .night-mode-set .bt.open {
 }
 
 .main_content .story-gallery {
+  margin-bottom: 20px;
+  overflow-x: hidden;
+  display: none;
+}
+
+.main_content .story-gallery .wrapp {
+  overflow-x: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 20px;
+  top: 0;
+  left: 0;
 }
 
-.main_content .story-gallery .story {
+.main_content .story-gallery .wrapp .story {
   -ms-flex-preferred-size: 18%;
       flex-basis: 18%;
   padding-top: 32%;
   position: relative;
-  z-index: -1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.8))), url(../img/skill.jpg);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8)), url(../img/skill.jpg);
   background-size: cover;
@@ -787,7 +811,7 @@ header .settings-menu .night-mode-set .bt.open {
   border-radius: 10px;
 }
 
-.main_content .story-gallery .story .id {
+.main_content .story-gallery .wrapp .story .id {
   font-size: 50px;
   color: var(--nav-color);
   position: absolute;
@@ -795,24 +819,24 @@ header .settings-menu .night-mode-set .bt.open {
   left: 10px;
 }
 
-.main_content .story-gallery .story img {
+.main_content .story-gallery .wrapp .story img {
   width: 50px;
   border-radius: 50%;
   height: 50px;
   border: 4px solid var(--primary-color);
 }
 
-.main_content .story-gallery .story p {
+.main_content .story-gallery .wrapp .story p {
   color: white;
   text-align: center;
 }
 
-.main_content .story-gallery .story1 {
+.main_content .story-gallery .wrapp .story1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a1.jpg);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a1.jpg);
 }
 
-.main_content .story-gallery .my .id {
+.main_content .story-gallery .wrapp .my .id {
   top: unset;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -820,17 +844,17 @@ header .settings-menu .night-mode-set .bt.open {
   bottom: 40px;
 }
 
-.main_content .story-gallery .story2 {
+.main_content .story-gallery .wrapp .story2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a2.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a2.png);
 }
 
-.main_content .story-gallery .story3 {
+.main_content .story-gallery .wrapp .story3 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a3.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a3.png);
 }
 
-.main_content .story-gallery .story4 {
+.main_content .story-gallery .wrapp .story4 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url(../img/a4.png);
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(../img/a4.png);
 }
@@ -1060,25 +1084,60 @@ header .settings-menu .night-mode-set .bt.open {
   }
 }
 
+.chat-bt {
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.chat-bt.off {
+  display: none;
+}
+
+.chat-bt h1 {
+  color: var(--primary-color);
+}
+
+.chat-bt i {
+  color: var(--primary-color);
+  font-size: 45px;
+}
+
 .chats {
   position: fixed;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 60px);
+  left: -100%;
+  background: var(--bg-color);
+  z-index: 10;
+  top: 60px;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 20px;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.chats.chat {
   left: 0;
-  width: 100%;
-  background: black;
-  z-index: 1000;
-  top: 70px;
+}
+
+.chats .conta-in {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.chats .contain {
-  background: yellow;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 
-.chats .contain .sef {
+.chats .conta-in .sef {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1090,52 +1149,75 @@ header .settings-menu .night-mode-set .bt.open {
           justify-content: space-between;
 }
 
-.chats .contain .sef .user-icon {
+.chats .conta-in .sef .tt {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.chats .conta-in .sef .clc {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.chats .conta-in .sef .user-icon {
   height: 40px;
   width: 40px;
 }
 
-.chats .contain .sef .user-icon img {
+.chats .conta-in .sef .user-icon img {
   width: 100%;
   border-radius: 50%;
 }
 
-.chats .contain .search {
-  margin-top: 30px;
+.chats .conta-in .sef .logout {
+  color: var(--g-tex);
+}
+
+.chats .conta-in .search {
+  margin-top: 20px;
+  margin-bottom: 10px;
   width: 100%;
-  background: cornflowerblue;
+  background: #b4b2b2;
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 20px;
 }
 
-.chats .contain .search i {
-  font-size: 20px;
+.chats .conta-in .search i {
+  font-size: 17px;
+  font-weight: light;
+  color: var(--g-tex);
+  padding: 10px 0px;
 }
 
-.chats .contain .search input {
+.chats .conta-in .search input {
   padding: 3% 0px;
   width: 90%;
   background: none;
   border: 0;
+  color: var(--g-tex);
   outline: 0;
+  color: var(--g-tex);
 }
 
-.chats .contain .active {
-  margin-top: 30px;
-  background: darkcyan;
+.chats .conta-in .active {
+  margin-top: 10px;
 }
 
-.chats .contain .active .cont {
+.chats .conta-in .active .cont {
+  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0px 0px 10px 0px;
 }
 
-.chats .contain .active .cont .item {
+.chats .conta-in .active .cont .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1149,7 +1231,7 @@ header .settings-menu .night-mode-set .bt.open {
   width: fit-content;
 }
 
-.chats .contain .active .cont .item .user-icon {
+.chats .conta-in .active .cont .item .user-icon {
   height: 40px;
   width: 40px;
   display: -webkit-box;
@@ -1161,16 +1243,21 @@ header .settings-menu .night-mode-set .bt.open {
           flex-direction: column;
 }
 
-.chats .contain .active .cont .item .user-icon img {
+.chats .conta-in .active .cont .item .user-icon img {
   width: 100%;
   border-radius: 50%;
 }
 
-.chats .contain .recents {
+.chats .conta-in .active .cont .item .nm {
+  color: var(--g-tex);
+}
+
+.chats .conta-in .recents {
   margin-top: 30px;
 }
 
-.chats .contain .recents .cont {
+.chats .conta-in .recents .cont {
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1178,9 +1265,10 @@ header .settings-menu .night-mode-set .bt.open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 400px;
 }
 
-.chats .contain .recents .cont .item {
+.chats .conta-in .recents .cont .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,7 +1278,7 @@ header .settings-menu .night-mode-set .bt.open {
   margin-bottom: 25px;
 }
 
-.chats .contain .recents .cont .item .user-icon {
+.chats .conta-in .recents .cont .item .user-icon {
   height: 55px;
   width: 55px;
   display: -webkit-box;
@@ -1202,12 +1290,12 @@ header .settings-menu .night-mode-set .bt.open {
           flex-direction: column;
 }
 
-.chats .contain .recents .cont .item .user-icon img {
+.chats .conta-in .recents .cont .item .user-icon img {
   width: 100%;
   border-radius: 50%;
 }
 
-.chats .contain .recents .cont .item .more {
+.chats .conta-in .recents .cont .item .more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1218,13 +1306,26 @@ header .settings-menu .night-mode-set .bt.open {
   margin-left: 25px;
 }
 
-.chats .contain .recents .cont .item .indi {
-  margin-left: auto;
+.chats .conta-in .recents .cont .item .more .name {
+  color: var(--g-tex);
+  font-size: 17px;
+  font-weight: 600;
 }
 
-@media screen and (min-width: 700px) {
+.chats .conta-in .recents .cont .item .more .info {
+  color: var(--g-tex);
+  font-size: 11px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.chats .conta-in .recents .cont .item .indi {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 500px) {
   .chats {
-    width: 300px;
+    max-width: 350px;
   }
 }
 
@@ -1501,6 +1602,7 @@ header .settings-menu .night-mode-set .bt.open {
 
 .contain .left .form form .loc select {
   min-height: 20px;
+  max-height: 50px;
   border: 1px solid #e7e7e7;
   width: 100%;
   padding: 10px 15px;
