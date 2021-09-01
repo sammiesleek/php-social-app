@@ -95,14 +95,26 @@ header .right_nav .search .search-bx {
   position: absolute;
 }
 
-header .right_nav .user-icon {
-  height: 40px;
-  width: 40px;
+header .right_nav .navs {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
-header .right_nav .user-icon img {
-  width: 100%;
-  border-radius: 50%;
+header .right_nav .navs i {
+  font-size: 20px;
+  color: white;
+}
+
+header .right_nav .navs:nth-child(2) {
+  margin: 0px 10px;
 }
 
 header .settings-menu {
@@ -276,6 +288,12 @@ header .settings-menu .night-mode-set .bt.open {
   position: fixed;
   height: 100vh;
   left: -100%;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.left_bar.active {
+  left: 0;
 }
 
 .left_bar .quick_links {
@@ -370,6 +388,12 @@ header .settings-menu .night-mode-set .bt.open {
   padding: 20px;
   border-radius: 4px;
   color: #626262;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.right_bar.active {
+  right: 0;
 }
 
 .right_bar .head {

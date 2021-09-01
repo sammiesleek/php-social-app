@@ -8,6 +8,11 @@
     padding:20px;
     border-radius:4px;
     color:#626262;
+    transition: all ease-in-out .5s;
+    &.active{
+        right:0;
+
+    }
     .head{
         display:flex;
         justify-content: space-between;

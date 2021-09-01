@@ -41,14 +41,23 @@ header{
                position: absolute;
            }
         }
-        .user-icon{
-            height:40px;
-            width:40px;
+        .navs{
+            
            
-            img{
-                width:100%;
-                border-radius: 50%;
+            
+            align-items:center;
+            justify-content: center;
+            display:flex;
+            position:relative;
+            i{
+                font-size:20px;
+                color:white;
+
             }
+            &:nth-child(2){
+                margin:0px 10px;
+            }
+            
            
         }
     }

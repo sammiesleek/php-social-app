@@ -5,6 +5,11 @@
     position:fixed; 
     height:100vh;
     left:-100%;
+    transition: all ease-in-out .5s;
+    &.active{
+        left:0;
+
+    }
     .quick_links{
         border-bottom: 1px solid #ccc;
         .link{

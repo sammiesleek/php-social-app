@@ -1,11 +1,27 @@
 const UserIcon = document.querySelector('.user-icon');
+const Lbt = document.querySelector('.L-bt');
+const Rbt = document.querySelector('.R-bt');
+const Rmenu = document.querySelector('.R-menu');
+const Lmenu = document.querySelector('.L-menu');
 const UserMenu = document.querySelector('.settings-menu');
 const drk = document.querySelector('.night-mode-set');
 const bt = document.querySelector('.bt');
-UserIcon.addEventListener('click', ()=>{
-    
-    UserMenu.classList.toggle('open');
-})
+
+// toggler
+const btoggle  = function(Obuton,Otarget,Oclass){
+    if(Obuton && Otarget){
+        Obuton.addEventListener('click', ()=>{
+        Otarget.classList.toggle(Oclass);
+        })
+    }
+    else{
+        return('');
+    }
+}
+btoggle(UserIcon,UserMenu,'open' );
+btoggle(Lbt,Lmenu,'active' );
+btoggle(Rbt,Rmenu,'active' );
+
 
 drk.addEventListener('click', ()=>{
     bt.classList.toggle('open');
