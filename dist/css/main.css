@@ -281,19 +281,35 @@ header .settings-menu .night-mode-set .bt.open {
   margin-left: 20px;
 }
 
+@media screen and (min-width: 700px) {
+  header .right_nav .L-bt {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1085px) {
+  header .right_nav .R-bt {
+    display: none;
+  }
+}
+
 .left_bar {
   top: 70px;
   -ms-flex-item-align: start;
       align-self: flex-start;
   position: fixed;
   height: 100vh;
-  left: -100%;
+  left: -1000px;
   -webkit-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
+  z-index: 10;
 }
 
 .left_bar.active {
-  left: 0;
+  left: 0px;
+  background: var(--body-color);
+  padding-left: 30px;
+  top: 0;
 }
 
 .left_bar .quick_links {
@@ -384,16 +400,19 @@ header .settings-menu .night-mode-set .bt.open {
   -ms-flex-item-align: start;
       align-self: flex-start;
   position: fixed;
-  right: 100%;
+  right: -1000px;
   padding: 20px;
   border-radius: 4px;
   color: #626262;
   -webkit-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
+  z-index: 10;
+  max-width: 300px;
 }
 
 .right_bar.active {
   right: 0;
+  top: 20px;
 }
 
 .right_bar .head {

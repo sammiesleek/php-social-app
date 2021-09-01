@@ -178,3 +178,25 @@ header{
         }
     }
 }
+
+
+@media screen and (min-width:700px) {
+    header{
+        .right_nav{
+    
+            .L-bt{
+                display:none;
+            }
+        }
+    }   
+}
+@media screen and (min-width:1085px) {
+    header{
+        .right_nav{
+    
+            .R-bt{
+                display:none;
+            }
+        }
+    }   
+}

@@ -4,10 +4,14 @@
     align-self:flex-start;
     position:fixed; 
     height:100vh;
-    left:-100%;
+    left:-1000px;
     transition: all ease-in-out .5s;
+    z-index: 10;
     &.active{
-        left:0;
+        left:0px;
+        background: $body-color;
+        padding-left: 30px;;
+        top:0;
 
     }
     .quick_links{

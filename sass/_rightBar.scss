@@ -4,13 +4,17 @@
     top:70px;
     align-self:flex-start;
     position:fixed; 
-    right:100%;
+    right:-1000px;
     padding:20px;
     border-radius:4px;
     color:#626262;
     transition: all ease-in-out .5s;
+    z-index:10;
+    max-width:300px;
     &.active{
         right:0;
+        top:20px;
+
 
     }
     .head{
