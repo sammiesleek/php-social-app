@@ -126,6 +126,18 @@
             width:100%;
             display:flex;
             flex-direction:column;
+            .Seterr{
+                width:100%;
+                padding:10px 0px;
+                text-align: center;
+                background: rgb(255, 163, 163);
+                border-radius: 5px;
+                margin-bottom: 10px;
+                display:none;
+                .err{
+                    text-align: center;
+                }
+            }
             form{
                 display:flex;
                 flex-direction: column;

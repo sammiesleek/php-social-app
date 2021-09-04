@@ -6,6 +6,17 @@ const Lmenu = document.querySelector('.L-menu');
 const UserMenu = document.querySelector('.settings-menu');
 const drk = document.querySelector('.night-mode-set');
 const bt = document.querySelector('.bt');
+const rmve = document.querySelectorAll('.cmm')
+
+
+//    rmve.forEach(item =>{
+//             item.addEventListener('click', ()=>{
+//                 alert('clicked')
+//                 if(Rmenu.contains(open)
+//                 Lmenu
+//             })
+//     })
+
 
 // toggler
 const btoggle  = function(Obuton,Otarget,Oclass){

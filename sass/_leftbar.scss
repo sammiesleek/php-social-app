@@ -1,17 +1,17 @@
 .left_bar{
     // flex-basis:25%;
-    top:70px;
+    top:50px;
     align-self:flex-start;
     position:fixed; 
-    height:100vh;
+    height:calc(100vh - 50px) ;
     left:-1000px;
+    min-width:250px;
     transition: all ease-in-out .5s;
     z-index: 10;
     &.active{
         left:0px;
         background: $body-color;
-        padding-left: 30px;;
-        top:0;
+        padding-left: 30px;
 
     }
     .quick_links{
@@ -24,7 +24,7 @@
             color:#626262;
             margin-bottom:30px;
             &:last-child{
-                color:#1876f2;
+                color:$default;
             }
             i{
                 margin-right:15px;
@@ -73,5 +73,6 @@
         left:0;
         position:sticky;
         flex-basis:25%;
+
     }
 }
