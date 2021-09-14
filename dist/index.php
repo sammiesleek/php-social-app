@@ -71,70 +71,16 @@
                         <input type="submit" value="Register" name="Reg" id="Reg">
                     </div>
                 </form>
-                <span class="qs"> have an account ? <span class="logbt">Login</span></span>
+                <span class="qs"> have an account ? <a href="login.php" class="logbt">Login</a></span>
             </div>
         </div>
         <div class="right">
-
+            <img src="img/ig.jpg" alt="">
         </div>
     </div>
-    <div id="login" class="logpg contain">
-        <div class="left">
-            <div class="tittle">
-                <h1>Chatme</h1>
-            </div>
-            <div class="login-with">
-                <a href="" class="goggle">
-                    <i class="icon icofont-google-plus"></i>
-                    Google +
-                </a>
-                <!-- <a href="" class="twitter">
-					<i class="icon icofont-twitter"></i>
-					Twitter
-				</a> -->
-                <a href="" class="facebook">
-                    <i class="icon icofont-facebook"></i>
-                    Facebook
-                </a>
-            </div>
-            <span class="alt">or Login with</span>
-            <div class="form">
-                <div class="error">
-                    <span>wrong credentials</span>
-                </div>
-                <form action="">
-                    <!-- <div class="field">
-						<input type="text" placeholder="First name" name="Fname" id="Fname">
-					</div>
-					<div class="field">
-						<input type="text" placeholder="Lastt name" name="Lname" id="Lname">
-					</div> -->
-                    <div class="field">
-                        <input type="email" placeholder="Email address" name="Email" id="Email">
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" name="Pass" id="Pass">
-                    </div>
-                    <div class="diff field">
-                        <input type="checkbox" placeholder="Password" name="Pass" id="Pass"> <span>
-                            keep me logged in
-                        </span>
-                        <a href="" class="pw">forgot password</a>
-                    </div>
-                    <div class="  field">
-                        <input type="submit" value="Login" name="Pass" id="Pass">
-                    </div>
-                </form>
-                <span class="qs">don't have an account ? <span class="signbt">Sign up</span></span>
 
-            </div>
-        </div>
-        <div class="right">
-
-        </div>
-    </div>
     <script src="js/script.js"></script>
-    <script src="js/acess.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 
 </html>

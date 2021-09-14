@@ -127,12 +127,13 @@
             display:flex;
             flex-direction:column;
             .Seterr{
-                width:100%;
-                padding:10px 0px;
+                width:fit-content;
+                margin:0px auto 10px auto;
+                padding:10px 20px;
                 text-align: center;
-                background: rgb(255, 163, 163);
+                background: rgb(236, 169, 169);
                 border-radius: 5px;
-                margin-bottom: 10px;
+                
                 display:none;
                 .err{
                     text-align: center;
@@ -250,19 +251,24 @@
     .right{
         flex-basis:0%;
         background:grey;
-        background-image: url(../img/ig.jpg);
-        background-size:cover;
-        background-position:center;
+        width:100%;
+
+        // background-image: url(../img/ig.jpg);
+        // background-size:cover;
+        // background-position:center;
         display:none;
+        img{
+            width:100%;
+        }
     }
 }
 #signup{
     transition: all ease .5s;
 }
-#login{
+.logpg{
     transition: all ease .5s;
-    display:none;
-    min-height:100vh;
+    
+    height:100vh;
     
 }
 @media screen and (min-width:1000px){

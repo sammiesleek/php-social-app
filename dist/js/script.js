@@ -1,21 +1,21 @@
-const loginbt =document.querySelector('.logbt')
-		const signupbt = document.querySelector('.signbt')
-		const signupg = document.querySelector('.signpg')
-		const logpg = document.querySelector('.logpg')
-        
-     
-		const controller = function(){
-			loginbt.addEventListener('click', ()=>{
-				logpg.style.display='flex'
-				signupg.style.display='none'
-			})
-			signupbt.addEventListener('click', ()=>{
-				logpg.style.display='none'
-				signupg.style.display='flex'
-			})
-		}
+		// const loginbt =document.querySelector('.logbt')
+		// const signupbt = document.querySelector('.signbt')
+		// const signupg = document.querySelector('.signpg')
+		// const logpg = document.querySelector('.logpg')
 
-		controller();
+     
+		// const controller = function(){
+		// 	loginbt.addEventListener('click', ()=>{
+		// 		logpg.style.display='flex'
+		// 		signupg.style.display='none'
+		// 	})
+		// 	signupbt.addEventListener('click', ()=>{
+		// 		logpg.style.display='none'
+		// 		signupg.style.display='flex'
+		// 	})
+		// }
+
+		
 
 
 		// countries API

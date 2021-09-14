@@ -36,32 +36,36 @@
                                     if($num->num_rows > 0){
                                         echo 'phone number already exist';
                                     }else{
-                                        $token = md5( rand(0,1000));
+                                        $token = md5( rand(time(),10000));
                                         $verified = false;
+                                        $un_id = rand(time(),5000);
                                         
                                         $Pass = password_hash($Pass,PASSWORD_DEFAULT);
-                                        $query = "INSERT INTO users (fname,lname,email,country,phone,pass,hash,verified) VALUES (?,?,?,?,?,?,?,?)";
+                                        $query = "INSERT INTO users (fname,lname,email,country,phone,pass,tokken,verified,unique_id) VALUES (?,?,?,?,?,?,?,?,?)";
                                         $stmt = $conn->prepare($query);
-                                        $stmt->bind_param('ssssissb', $Fname,$Lname,$Email,$Country,$Phone,$Pass,$token,$verified); 
+                                        $stmt->bind_param('ssssissbs', $Fname,$Lname,$Email,$Country,$Phone,$Pass,$token,$verified,$un_id); 
                                         if($stmt->execute()){
+                                            echo 'success';
+
                                             // sending tokens to user's email address
-                                            echo $Email;
-                                            $toEmail = $Email;
-                                            $subject = 'Cnnfirm your email';
-                                            $body ='<h2>Contact Request</h2>
-                                                <h4>Name <P>.$Fname.</p>
-                                                <h4>Email <P>'.$Email.'</p>
-                                                <h4>Name <P>'.$Fname.'</p>
-                                                ';
-                                            $headers ="MIME-Version:1.0" ."/r/n";
-                                            $headers .="Content-Type:text/html;charset=UTF-8" . "/r/n";
-                                            $headers .= "From: Chatme";
-                                            if(mail($toEmail,$subject,$body,$headers)){
-                                                echo 'verification link has been sent to your email address';
-                                            }
-                                            else{
-                                                echo'some error occured';
-                                            }
+                                            // echo $Email;
+                                            
+                                            // $toEmail = $Email;
+                                            // $subject = 'Cnnfirm your email';
+                                            // $body ='<h2>Contact Request</h2>
+                                            //     <h4>Name <P>.$Fname.</p>
+                                            //     <h4>Email <P>'.$Email.'</p>
+                                            //     <h4>Name <P>'.$Fname.'</p>
+                                            //     ';
+                                            // $headers ="MIME-Version:1.0" ."/r/n";
+                                            // $headers .="Content-Type:text/html;charset=UTF-8" . "/r/n";
+                                            // $headers .= "From: Chatme";
+                                            // if(mail($toEmail,$subject,$body,$headers)){
+                                            //     echo 'verification link has been sent to your email address';
+                                            // }
+                                            // else{
+                                            //     echo'some error occured';
+                                            // }
 
                                         }else{
                                             echo 'you have a problem';

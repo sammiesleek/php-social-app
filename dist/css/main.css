@@ -303,7 +303,6 @@ header .settings-menu .night-mode-set .bt.open {
   min-width: 250px;
   -webkit-transition: all ease-in-out .5s;
   transition: all ease-in-out .5s;
-  z-index: 10;
 }
 
 .left_bar.active {
@@ -1130,7 +1129,7 @@ header .settings-menu .night-mode-set .bt.open {
 .chat-bt {
   position: fixed;
   right: 20px;
-  z-index: 100;
+  z-index: 1000;
   bottom: 20px;
   cursor: pointer;
 }
@@ -1216,11 +1215,15 @@ header .settings-menu .night-mode-set .bt.open {
   color: var(--g-tex);
 }
 
-.chats .conta-in .search {
+.chats .conta-in .search-box {
+  position: relative;
+}
+
+.chats .conta-in .search-box .search {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
-  background: #b4b2b2;
+  background: transparent;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1231,14 +1234,17 @@ header .settings-menu .night-mode-set .bt.open {
   padding: 0px 20px;
 }
 
-.chats .conta-in .search i {
+.chats .conta-in .search-box .search .sch-bt {
   font-size: 17px;
   font-weight: light;
   color: var(--g-tex);
   padding: 10px 0px;
+  margin-left: auto;
+  -webkit-transition: all ease 0.32s;
+  transition: all ease 0.32s;
 }
 
-.chats .conta-in .search input {
+.chats .conta-in .search-box .search input {
   padding: 3% 0px;
   width: 90%;
   background: none;
@@ -1246,6 +1252,101 @@ header .settings-menu .night-mode-set .bt.open {
   color: var(--g-tex);
   outline: 0;
   color: var(--g-tex);
+}
+
+.chats .conta-in .search-box .result {
+  -webkit-transition: all ease 0.22s;
+  transition: all ease 0.22s;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: 60px;
+  display: none;
+  opacity: 0;
+  background-color: #02131f;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.chats .conta-in .search-box .result.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chats .conta-in .search-box .result .cont {
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 400px;
+}
+
+.chats .conta-in .search-box .result .cont .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.chats .conta-in .search-box .result .cont .item .user-icon {
+  height: 45px;
+  width: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chats .conta-in .search-box .result .cont .item .user-icon img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.chats .conta-in .search-box .result .cont .item .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 25px;
+}
+
+.chats .conta-in .search-box .result .cont .item .more .name {
+  color: var(--g-tex);
+  font-size: 15px;
+}
+
+.chats .conta-in .search-box .result .cont .item .more .info {
+  color: var(--g-tex);
+  font-size: 10px;
+}
+
+.chats .conta-in .search-box .result .cont .item .indi {
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .chats .conta-in .active {
@@ -1364,6 +1465,177 @@ header .settings-menu .night-mode-set .bt.open {
 .chats .conta-in .recents .cont .item .indi {
   margin-left: auto;
   margin-right: 20px;
+}
+
+.chats .chat-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0b253a;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+}
+
+.chats .chat-area .header {
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+.chats .chat-area .header i {
+  color: #333;
+  font-size: 18px;
+}
+
+.chats .chat-area .header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.chats .chat-area .header .details .name {
+  font-size: 17px;
+  font-weight: 600px;
+}
+
+.chats .chat-area .header .details .status {
+  font-size: 13px;
+}
+
+.chats .chat-area .chat-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 10px 20px 10px;
+  overflow-y: auto;
+  height: calc(100% - 120px);
+  margin-bottom: auto;
+}
+
+.chats .chat-area .chat-box .chat {
+  margin-top: 15px;
+}
+
+.chats .chat-area .chat-box .chat:last-child {
+  margin-bottom: 100px;
+}
+
+.chats .chat-area .chat-box .chat .details {
+  max-width: calc(100% - 80px);
+}
+
+.chats .chat-area .chat-box .chat .details .message {
+  padding: 8px 16px;
+}
+
+.chats .chat-area .chat-box .going {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chats .chat-area .chat-box .going .details {
+  margin-left: auto;
+}
+
+.chats .chat-area .chat-box .going .details .message {
+  background: #333;
+  color: #fff;
+  border-radius: 8px 8px 0 8px;
+}
+
+.chats .chat-area .chat-box .coming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.chats .chat-area .chat-box .coming img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.chats .chat-area .chat-box .coming .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.chats .chat-area .chat-box .coming .details .message {
+  border-radius: 0px 8px 8px 8px;
+  background: #fff;
+  color: #928787;
+  margin-right: auto;
+}
+
+.chats .chat-area .form {
+  position: inherit;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.chats .chat-area .form form {
+  padding: 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chats .chat-area .form form input {
+  padding: 12px 10px 12px 20px;
+  width: calc(100% - 50px);
+  border: 0;
+  border-radius: 20px;
+}
+
+.chats .chat-area .form form input:focus {
+  border: 0;
+  outline: none;
+}
+
+.chats .chat-area .form form button {
+  width: 39px;
+  height: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  border-radius: 50%;
+  outline: 0;
+  border: 0;
+}
+
+.chats .chat-area .form form button i {
+  font-size: 20px;
 }
 
 @media screen and (min-width: 500px) {
@@ -1552,12 +1824,14 @@ header .settings-menu .night-mode-set .bt.open {
 }
 
 .contain .left .form .Seterr {
-  width: 100%;
-  padding: 10px 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto 10px auto;
+  padding: 10px 20px;
   text-align: center;
-  background: #ffa3a3;
+  background: #eca9a9;
   border-radius: 5px;
-  margin-bottom: 10px;
   display: none;
 }
 
@@ -1699,10 +1973,12 @@ header .settings-menu .night-mode-set .bt.open {
   -ms-flex-preferred-size: 0%;
       flex-basis: 0%;
   background: grey;
-  background-image: url(../img/ig.jpg);
-  background-size: cover;
-  background-position: center;
+  width: 100%;
   display: none;
+}
+
+.contain .right img {
+  width: 100%;
 }
 
 #signup {
@@ -1710,11 +1986,10 @@ header .settings-menu .night-mode-set .bt.open {
   transition: all ease .5s;
 }
 
-#login {
+.logpg {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
-  display: none;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 @media screen and (min-width: 1000px) {

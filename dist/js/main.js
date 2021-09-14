@@ -125,3 +125,21 @@ clc.addEventListener('click', ()=>{
     panel.classList.remove('chat');
     drawer.classList.remove('off');
 })
+
+
+// user search interactive
+const searchBt = document.querySelector('.sch-bt')
+const search_In = document.querySelector('.input_us')
+const search_Rst = document.querySelector('.result')
+
+search_In.addEventListener('focus',()=>{
+    searchBt.classList.add('icofont-close-line');
+    // search_In.focus();
+    search_Rst.classList.add('active');
+})
+searchBt.addEventListener('click',()=>{
+    searchBt.classList.remove('icofont-close-line');
+    search_In.value='';
+    search_Rst.classList.remove('active');
+})
+

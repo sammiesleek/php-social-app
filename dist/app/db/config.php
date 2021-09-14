@@ -13,4 +13,6 @@
     {
         die('Database connection error:' . $conn->connect_error);
     }
+    // $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db)
+    
 ?>
