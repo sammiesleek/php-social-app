@@ -1164,7 +1164,7 @@ header .settings-menu .night-mode-set .bt.open {
   transition: all ease-in-out .5s;
 }
 
-.chats.show {
+.chats.chat {
   left: 0;
 }
 
@@ -1480,6 +1480,11 @@ header .settings-menu .night-mode-set .bt.open {
   transition: all linear .35s;
   bottom: 0;
   z-index: 200;
+}
+
+.chats .chat-area.chat {
+  display: block;
+  opacity: 1;
 }
 
 .chats .chat-area .header {
@@ -2036,6 +2041,11 @@ header .settings-menu .night-mode-set .bt.open {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.slct {
+  cursor: pointer;
+  background: red;
 }
 
 body {

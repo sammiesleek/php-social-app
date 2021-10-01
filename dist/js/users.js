@@ -10,11 +10,11 @@ setInterval(() => {
                 userBox.innerHTML=data;
                     
                 }
-
+                
             }
         }
       
         xhr.send()
-}, 10000);
+}, 500);
 
     

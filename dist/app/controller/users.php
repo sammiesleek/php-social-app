@@ -18,7 +18,7 @@
     }elseif($count > 1){
         while($rows = $result->fetch_assoc()){
             $output .='
-                <div class="item">
+                <div class="slct item">
                     <div class="online user-icon">
                         <img src="img/a3.png" alt="">
                     </div>

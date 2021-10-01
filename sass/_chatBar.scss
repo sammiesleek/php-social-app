@@ -31,7 +31,7 @@
     flex-direction: column;
     padding:0px 20px;
     transition:all ease-in-out .5s;
-    &.show{
+    &.chat{
         left:0;
     }
     .conta-in{
@@ -251,6 +251,10 @@
 
         bottom:0;
         z-index: 200;
+        &.chat{
+            display: block;
+            opacity: 1;
+        }
         .header{
             padding:10px 30px;
 
